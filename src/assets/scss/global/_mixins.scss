@@ -1,5 +1,8 @@
 @use 'sass:list';
 
+@use './vars' as *;
+@use './functions' as *;
+
 @mixin font($size-values: null, $style-values: null, $font-family: null) {
   $size-rules: font-size line-height letter-spacing;
   $style-rules: font-weight font-style;

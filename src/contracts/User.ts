@@ -1,4 +1,5 @@
-import type { Company } from '@/contracts/company'
+import type { Company } from '@/contracts/Company'
+import type { Address } from '@/contracts/Address'
 
 export interface User {
   id: number
@@ -7,4 +8,5 @@ export interface User {
   phone: string
   website: string
   company: Company
+  address: Address
 }

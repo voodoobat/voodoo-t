@@ -24,8 +24,8 @@ defineProps<{
   display: flex;
   flex-direction: column;
   background: $COLOR_WHITE;
-  border-radius: 0.25em;
-  box-shadow: 1px 1px 3px rgba($COLOR_BLACK, 15%);
+  border-radius: $RADIUS_DEFAULT;
+  box-shadow: $SHADOW_DEFAULT;
 }
 
 .post-title {

@@ -2,11 +2,11 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
+import svg from 'vite-svg-loader'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueJsx()],
+  plugins: [vue(), svg()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -16,9 +16,9 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @import '@/assets/scss/global/vars';
-          @import '@/assets/scss/global/functions';
-          @import '@/assets/scss/global/mixins';
+          @use '@/assets/scss/global/vars' as *;
+          @use '@/assets/scss/global/functions' as *;
+          @use '@/assets/scss/global/mixins' as *;
         `,
       },
     },
