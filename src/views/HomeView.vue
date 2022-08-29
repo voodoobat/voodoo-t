@@ -41,7 +41,7 @@ const filtered = computed(() => {
       :key="post.id"
       class="posts-column"
       :post="post"
-      :author="usersHash[post.userId]"
+      :author="post.author"
     />
   </layout-container>
 </template>
