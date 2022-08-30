@@ -7,21 +7,19 @@ interface UsersState {
     [key: number]: string
   }
 }
+
 export const usersStore = defineStore('users', {
   state: (): UsersState => ({
     users: [],
     usersHash: {},
   }),
   actions: {
-    async setUsers(data: User[]) {
-      const hash: { [key: number]: string } = {}
-
+    setUsers(data: User[]) {
       data.forEach(({ id, name }) => {
-        hash[id] = name
+        this.usersHash[id] = name
       })
 
       this.users = data
-      this.usersHash = hash
     },
   },
 })

@@ -38,8 +38,8 @@ const onInput = ({ target }: { target: HTMLInputElement }) => {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    pointer-events: none;
     color: $COLOR_GRAY;
+    pointer-events: none;
     border-right: 1px solid transparent;
     @include position(absolute, 0 null null 0);
     @include size(3em 100%);

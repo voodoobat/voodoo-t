@@ -8,7 +8,7 @@ export const postsStore = defineStore('posts', {
     posts: [],
   }),
   actions: {
-    async setPosts(data: Post[]) {
+    setPosts(data: Post[]) {
       this.posts = data
     },
   },
